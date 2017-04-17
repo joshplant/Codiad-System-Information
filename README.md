@@ -12,7 +12,7 @@ Currently shows the following information:
  - More to come...
 
 ## Installing
-Open up your server in an SSH, cd to Codiad's plugin directory and clone this repository. Reload Codiad and the plugin should now be ready to use.
+Open up your server in an SSH, cd to Codiad's plugin directory and clone this repository. Reload Codiad and the plugin should now be ready to use. Look for "Server Stats" in the plugin section of the right side bar.
 ```
 cd /var/www/Codiad/plugins
 git clone https://github.com/jpl42/Codiad-System-Information.git
