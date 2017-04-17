@@ -1,0 +1,13 @@
+[{
+    "author": "Josh Plant",
+    "version": "1.0.0",
+    "name": "System_Information",
+    "url" : "https://github.com/jpl42/Codiad-System-Information",
+    "rightbar": [
+        {
+            "action": "codiad.System_Information.Server_Dialog();",
+            "icon": "icon-home",
+            "title": "Server Stats"
+        }
+    ]
+}]
