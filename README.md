@@ -1,6 +1,6 @@
 # Codiad-System-Information
-Server System Information Plugin for Codiad. 
 ![Plugin Screenshot](https://github.com/jpl42/Codiad-System-Information/raw/master/screen.png "Plugin Screenshot")
+Server System Information Plugin for Codiad. 
 
 ## Overview
 Currently shows the following information:
