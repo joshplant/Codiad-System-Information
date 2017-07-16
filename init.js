@@ -2,6 +2,7 @@
  *  (C) 2017 Josh Plant (JPL42)
  */
 
+
 (function(global, $){
     
     // Define core
@@ -20,7 +21,7 @@
         path: curpath,
 
 		init: function() {
-			
+
 		},
 		
 		Server_Dialog: function() {
@@ -30,3 +31,38 @@
     };
 
 })(this, jQuery);
+
+var killed = true;
+
+function colorizeData(data){
+    if(data <50){
+        return "<b style='color:green;'>"+data+"%</b>";
+    }
+    else if(data < 75){ 
+        return "<b style='color:orange;'>"+data+"%</b>";
+    } 
+    else if(data >= 75){ 
+        return "<b style='color:red;'>"+data+"%</b>";
+    } 
+};
+
+function poll() {
+    if(!killed){
+        $.post( "plugins/Codiad-System-Information/poller.php", { systemInformation: "cpu"},function( data ) {
+            $("#cpuUsage").html(colorizeData(data));
+            $("#cpuBar").width(data+"%");
+        });
+
+        $.post( "plugins/Codiad-System-Information/poller.php", { systemInformation: "memory"},function( data ) {
+            $("#memoryUsage").html(colorizeData(data));
+            $("#memoryBar").width(data+"%");
+        });
+
+        $.post( "plugins/Codiad-System-Information/poller.php", { systemInformation: "disk"},function( data ) {
+            $("#diskUsage").html(colorizeData(data));
+            $("#diskBar").width(data+"%");
+        });
+    }
+};
+
+setInterval("poll();",1000);
