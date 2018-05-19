@@ -1,4 +1,8 @@
 # Codiad-System-Information
+
+## No longer maintained
+Since Codiad is no longer actively maintained, this plug-in will not be either. Use at your own risk!
+
 ![Plugin Screenshot](https://github.com/jpl42/Codiad-System-Information/raw/master/screen.png "Plugin Screenshot")
 Server System Information Plugin for Codiad. 
 
